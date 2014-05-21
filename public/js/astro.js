@@ -48,8 +48,8 @@ function draw_map(){
  }
 
 window.onload=function(){
-  $('#racontrol').hide();
-  $('#deccontrol').hide();
+  //$('#racontrol').hide();
+  //$('#deccontrol').hide();
   $('#loading').hide();
   
   $('#magslider').noUiSlider({
@@ -61,10 +61,11 @@ window.onload=function(){
   });  
 
 $('#zoomslider').noUiSlider({
-      start: [12.05],
+      start: [8.00],
+      step: 1,
       range: {
-          'min': 5,
-          'max': 16 
+          'min': 3, 
+          'max': 14 
       }
   });
 
