@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    title Ruby Astronomical Project (RAP)
+    ==meta 
+    <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/css/bootstrap.min.css' />
+    <link rel="stylesheet" href="/css/jquery.nouislider.css">
+    <link rel="stylesheet" href="/css/astro.css">
+    css:
+      canvas { border: 1px solid black; background: black;}
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+<script src='//d3js.org/d3.v3.min.js'></script>
+<script src='/js/jquery.nouislider.min.457e14487a5e4fc86fbb9f738fd27c36.js'></script>
+<script src='/js/astro.b6539c3fb69ac169e1cbcc1d1d555ffb.js'></script>
+  header
+    div class="navbar navbar-inverse"
+      div class="nav-header"
+        button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse"
+          span class="icon-bar"
+          span class="icon-bar"
+          span class="icon-bar"
+        a class="navbar-brand" href="/" Ruby Astronomical Project 
+      div class="navbar-collapse collapse navbar-inverse-collapse"
+        form class="navbar-form navbar-right"
+          input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term"
+          button class="btn btn-default" type="submit"
+            span class="glyphicon glyphicon-search"
+        ul class="nav navbar-nav navbar-right"
+          li
+            a href="/" Home 
+          li
+            a href="/" Maps 
+          li class="dropdown"
+            a href="#" class="dropdown-toggle" data-toggle="dropdown" Catalogs 
+            ul class="dropdown-menu"
+              li 
+                a href="/" Messier
+              li 
+                a href="/" NGC
+              li 
+                a href="/" Constellations
+  body
+    div class="main" style="margin:15px; margin-top:2.5em;"
+      == yield
+  
+  footer

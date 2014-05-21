@@ -1,0 +1,30 @@
+table#aobjects class="table"
+  th NGC / IC
+  th HIP
+  th HD
+  th Gilese
+  th Messier
+  th FlamsteedBayer
+  th Name
+  th Type
+  th Constellation
+  th Distance
+  th RA
+  th Dec
+  th Mag
+  - for o in @aobjects
+    tr
+    <td>#{o.ic}#{o.ngc}</td>
+    td.hip = o.hip
+    td.hd = o.hd
+    td.gliese = o.gliese 
+    td.mes = o.mes
+    <td>#{o.flamsteed}/#{o.bayer}</td>
+    td.name = o.name
+    td.type = o.type
+    <td>#{o.const}(#{o.ccode})</td>
+    td.distance = o.distance
+    <td>#{o.ra}</td>
+    <td>#{o.dec}</td>
+    td.mag = o.mag
+footer

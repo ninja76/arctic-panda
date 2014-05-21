@@ -1,0 +1,1116 @@
+ORI	pi^2
+ORI	pi^3
+ORI	pi^4
+ORI	pi^5
+ORI	pi^6
+ORI	gamma
+ORI	delta
+ORI	eta
+ORI	tau
+ORI	beta
+ORI	kappa
+ORI	zeta
+ORI	alpha
+ORI	lambda
+ORI	gamma
+ORI	
+ORI	zeta
+ORI	epsilon
+ORI	delta
+ORI	
+ORI	alpha
+ORI	mu
+ORI	nu
+ORI	chi^1
+ORI	
+ORI	mu
+ORI	xi
+ORI	chi^2
+ORI	
+GEM	alpha
+GEM	rho
+GEM	tau
+GEM	epsilon
+GEM	mu
+GEM	eta
+GEM	
+GEM	epsilon
+GEM	nu
+GEM	
+GEM	kappa
+GEM	upsilon
+GEM	iota
+GEM	tau
+GEM	theta
+GEM	
+GEM	beta
+GEM	upsilon
+GEM	delta
+GEM	zeta
+GEM	gamma
+GEM	
+GEM	delta
+GEM	lambda
+GEM	xi
+GEM	
+CNC	iota
+CNC	gamma
+CNC	delta
+CNC	beta
+CNC	8
+CNC	gamma
+CNC	
+CNC	delta
+CNC	alpha
+CNC	
+CMI	alpha
+CMI	beta
+CMI	
+CMA	iota
+CMA	theta
+CMA	gamma
+CMA	iota
+CMA	alpha
+CMA	nu^3
+CMA	nu
+CMA	beta
+CMA	
+CMA	alpha
+CMA	omicron^2
+CMA	delta
+CMA	epsilon
+CMA	omicron
+CMA	nu
+CMA	xi
+CMA	
+CMA	delta
+CMA	omega
+CMA	eta
+CMA	
+CMA	epsilon
+CMA	zeta
+CMA	
+CMA	epsilon
+CMA	kappa
+CMA	
+MON	15
+MON	13
+MON	8
+MON	18
+MON	delta
+MON	28
+MON	zeta
+MON	
+MON	13
+MON	18
+MON	
+MON	28
+MON	alpha
+MON	
+MON	delta
+MON	beta
+MON	gamma
+MON	
+LEP	mu
+LEP	alpha
+LEP	zeta
+LEP	eta
+LEP	theta
+LEP	delta
+LEP	gamma
+LEP	beta
+LEP	alpha
+LEP	
+LEP	beta
+LEP	epsilon
+LEP	mu
+LEP	
+LEP	mu
+LEP	lambda
+LEP	
+LEP	mu
+LEP	kappa
+LEP	
+SEX	alpha
+SEX	beta
+SEX	gamma
+SEX	alpha
+SEX	
+PYX	beta
+PYX	alpha
+PYX	gamma
+PYX	
+TRI	alpha
+TRI	beta
+TRI	gamma
+TRI	alpha
+TRI	
+ARI	gamma
+ARI	beta
+ARI	alpha
+ARI	41
+ARI	
+LEO	beta
+LEO	delta
+LEO	60
+LEO	gamma
+LEO	zeta
+LEO	mu
+LEO	kappa
+LEO	lambda
+LEO	epsilon
+LEO	eta
+LEO	theta
+LEO	delta
+LEO	
+LEO	epsilon
+LEO	mu
+LEO	
+LEO	omicron
+LEO	eta
+LEO	alpha
+LEO	31
+LEO	
+LEO	rho
+LEO	theta
+LEO	iota
+LEO	sigma
+LEO	
+LMI	beta
+LMI	46
+LMI	21
+LMI	beta
+LMI	
+LYN	alpha
+LYN	38
+LYN	31
+LYN	21
+LYN	15
+LYN	2
+LYN	
+VIR	nu
+VIR	beta
+VIR	eta
+VIR	gamma
+VIR	delta
+VIR	epsilon
+VIR	
+VIR	gamma
+VIR	theta
+VIR	alpha
+VIR	iota
+VIR	mu
+VIR	
+VIR	theta
+VIR	zeta
+VIR	tau
+VIR	109
+VIR	
+VEL	mu
+VEL	psi
+VEL	lambda
+VEL	gamma
+VEL	delta
+VEL	kappa
+VEL	phi
+VEL	mu
+VEL	
+CEN	alpha
+CEN	beta
+CEN	epsilon
+CEN	zeta
+CEN	upsilon^1
+CEN	mu
+CEN	nu
+CEN	theta
+CEN	
+CEN	kappa
+CEN	eta
+CEN	mu
+CEN	iota
+CEN	
+CEN	zeta
+CEN	gamma
+CEN	sigma
+CEN	delta
+CEN	pi
+CEN	lambda
+CEN	
+CRT	theta
+CRT	epsilon
+CRT	delta
+CRT	alpha
+CRT	beta
+CRT	gamma
+CRT	zeta
+CRT	eta
+CRT	
+CRT	gamma
+CRT	delta
+ANT	
+ANT	iota
+ANT	alpha
+ANT	theta
+ANT	epsilon
+ANT	alpha
+ANT	
+HYA	pi
+HYA	gamma
+HYA	beta
+HYA	xi
+HYA	nu
+HYA	mu
+HYA	lambda
+HYA	upsilon^1
+HYA	alpha
+HYA	iota
+HYA	theta
+HYA	zeta
+HYA	epsilon
+HYA	delta
+HYA	sigma
+HYA	eta
+HYA	zeta
+HYA	
+PUP	rho
+PUP	xi
+PUP	zeta
+PUP	pi
+PUP	sigma
+PUP	zeta
+PUP	
+PUP	sigma
+PUP	L2
+PUP	nu
+PUP	tau
+PUP	L2
+PUP	
+COL	delta
+COL	gamma
+COL	beta
+COL	alpha
+COL	epsilon
+COL	
+COL	beta
+COL	eta
+COL	
+CAR	alpha
+CAR	chi
+CAR	epsilon
+CAR	iota
+CAR	q
+CAR	p
+CAR	theta
+CAR	omega
+CAR	beta
+CAR	upsilon
+CAR	L
+CAR	iota
+CAR	
+CAS	epsilon
+CAS	delta
+CAS	gamma
+CAS	alpha
+CAS	
+CAS	gamma
+CAS	kappa
+CAS	beta
+CAS	
+PIC	alpha
+PIC	gamma
+PIC	beta
+PIC	delta
+PIC	alpha
+PIC	
+DOR	gamma
+DOR	alpha
+DOR	zeta
+DOR	beta
+DOR	delta
+DOR	
+AND	alpha
+AND	delta
+AND	beta
+AND	mu
+AND	nu
+AND	phi
+AND	51
+AND	
+AND	pi
+AND	beta
+AND	upsilon
+AND	gamma
+AND	
+AND	eta
+AND	zeta
+AND	epsilon
+AND	delta
+AND	pi
+AND	sigma
+AND	theta
+AND	iota
+AND	
+AND	omicron
+AND	iota
+AND	kappa
+AND	lambda
+AND	
+TAU	omicron
+TAU	xi
+TAU	lambda
+TAU	gamma
+TAU	theta
+TAU	alpha
+TAU	zeta
+TAU	
+TAU	beta
+TAU	epsilon
+TAU	delta
+TAU	gamma
+TAU	
+TAU	epsilon
+TAU	eta
+TAU	
+AUR	delta
+AUR	beta
+AUR	alpha
+AUR	delta
+AUR	
+AUR	alpha
+AUR	epsilon
+AUR	zeta
+AUR	iota
+AUR	bet_tau
+AUR	theta
+AUR	beta
+AUR	
+HOR	alpha
+HOR	iota
+HOR	eta
+HOR	zeta
+HOR	
+CAE	gamma
+CAE	beta
+CAE	alpha
+CAE	delta
+CAE	
+SCL	alpha
+SCL	delta
+SCL	gamma
+SCL	beta
+SCL	eta
+SCL	alpha
+SCL	
+CET	delta
+CET	omicron
+CET	zeta
+CET	theta
+CET	iota
+CET	beta
+CET	upsilon
+CET	delta
+CET	gamma
+CET	alpha
+CET	lambda
+CET	mu
+CET	xi
+CET	gamma
+CET	
+CET	beta
+CET	tau
+CET	
+FOR	alpha
+FOR	beta
+FOR	nu
+FOR	
+PHE	alpha
+PHE	kappa
+PHE	beta
+PHE	gamma
+PHE	delta
+PHE	beta
+PHE	
+PHE	kappa
+PHE	zeta
+PHE	eta
+PHE	
+PHE	kappa
+PHE	epsilon
+PHE	iota
+PHE	sigma
+PHE	epsilon
+PHE	
+CAM	7
+CAM	beta
+CAM	alpha
+CAM	gamma
+CAM	
+CAM	alpha
+CAM	SAO13788
+CAM	SAO6022
+CAM	
+ERI	alpha
+ERI	chi
+ERI	phi
+ERI	kappa
+ERI	iota
+ERI	theta
+ERI	41
+ERI	43
+ERI	upsilon^2
+ERI	upsilon^1
+ERI	tau^9
+ERI	tau^8
+ERI	tau^6
+ERI	tau^5
+ERI	tau^4
+ERI	tau^3
+ERI	tau^2
+ERI	tau^1
+ERI	eta
+ERI	zeta
+ERI	epsilon
+ERI	delta
+ERI	pi
+ERI	gamma
+ERI	omicron
+ERI	nu
+ERI	mu
+ERI	beta
+ERI	
+PEG	alp_and
+PEG	beta
+PEG	eta
+PEG	pi
+PEG	
+PEG	alp_and
+PEG	gamma
+PEG	alpha
+PEG	beta
+PEG	mu
+PEG	lambda
+PEG	iota
+PEG	kappa
+PEG	
+PEG	alpha
+PEG	zeta
+PEG	theta
+PEG	epsilon
+PEG	
+PER	eta
+PER	tau
+PER	gamma
+PER	
+PER	tau
+PER	iota
+PER	alpha
+PER	
+PER	eta
+PER	gamma
+PER	alpha
+PER	sigma
+PER	nu
+PER	epsilon
+PER	xi
+PER	zeta
+PER	omicron
+PER	
+PER	alpha
+PER	psi
+PER	delta
+PER	48
+PER	mu
+PER	lambda
+PER	
+PER	iota
+PER	kappa
+PER	beta
+PER	epsilon
+PER	
+PER	beta
+PER	rho
+PER	16
+PER	
+PER	iota
+PER	theta
+PER	phi
+PER	
+PSC	phi
+PSC	tau
+PSC	upsilon
+PSC	phi
+PSC	eta
+PSC	omicron
+PSC	alpha
+PSC	xi
+PSC	nu
+PSC	epsilon
+PSC	delta
+PSC	omega
+PSC	iota
+PSC	theta
+PSC	gamma
+PSC	kappa
+PSC	lambda
+PSC	iota
+PSC	
+PSC	gamma
+PSC	beta
+PSC	
+UMA	eta
+UMA	zeta
+UMA	epsilon
+UMA	delta
+UMA	alpha
+UMA	23
+UMA	omicron
+UMA	iota
+UMA	kappa
+UMA	mu
+UMA	xi
+UMA	nu
+UMA	psi
+UMA	chi
+UMA	eta
+UMA	
+UMA	delta
+UMA	gamma
+UMA	beta
+UMA	alpha
+UMA	
+UMA	23
+UMA	upsilon
+UMA	phi
+UMA	theta
+UMA	lambda
+UMA	mu
+UMA	
+UMI	alpha
+UMI	delta
+UMI	epsilon
+UMI	zeta
+UMI	eta
+UMI	gamma
+UMI	beta
+UMI	zeta
+UMI	
+CEP	gamma
+CEP	iota
+CEP	zeta
+CEP	alpha
+CEP	beta
+CEP	gamma
+CEP	
+CEP	beta
+CEP	iota
+CEP	
+CHA	alpha
+CHA	gamma
+CHA	beta
+CHA	delta
+CHA	theta
+CHA	alpha
+CHA	
+CIR	gamma
+CIR	alpha
+CIR	beta
+CIR	
+COM	alpha
+COM	beta
+COM	gamma
+COM	
+CRA	kappa
+CRA	lambda
+CRA	epsilon
+CRA	gamma
+CRA	alpha
+CRA	beta
+CRA	delta
+CRA	zeta
+CRA	eta
+CRA	theta
+CRA	
+CRB	theta
+CRB	beta
+CRB	alpha
+CRB	gamma
+CRB	delta
+CRB	epsilon
+CRB	iota
+CRB	
+CRU	beta
+CRU	delta
+CRU	
+CRU	gamma
+CRU	alpha
+CRU	
+CRV	alpha
+CRV	epsilon
+CRV	gamma
+CRV	delta
+CRV	beta
+CRV	epsilon
+CRV	
+CVN	alpha
+CVN	beta
+CVN	
+CYG	beta
+CYG	chi
+CYG	eta
+CYG	gamma
+CYG	alpha
+CYG	
+CYG	zeta
+CYG	epsilon
+CYG	gamma
+CYG	delta
+CYG	iota
+CYG	
+DEL	epsilon
+DEL	beta
+DEL	alpha
+DEL	gamma
+DEL	delta
+DEL	beta
+DEL	
+DRA	lambda
+DRA	kappa
+DRA	alpha
+DRA	iota
+DRA	theta
+DRA	eta
+DRA	zeta
+DRA	chi
+DRA	tau
+DRA	epsilon
+DRA	delta
+DRA	xi
+DRA	nu
+DRA	beta
+DRA	gamma
+DRA	xi
+DRA	
+EQU	alpha
+EQU	delta
+EQU	gamma
+EQU	
+GRU	alpha
+GRU	beta
+GRU	iota
+GRU	
+GRU	zeta
+GRU	epsilon
+GRU	beta
+GRU	delta
+GRU	mu
+GRU	lambda
+GRU	gamma
+GRU	
+HER	pi
+HER	eta
+HER	zeta
+HER	epsilon
+HER	pi
+HER	rho
+HER	theta
+HER	iota
+HER	tau
+HER	phi
+HER	sigma
+HER	iota
+HER	
+HER	epsilon
+HER	beta
+HER	gamma
+HER	
+HER	epsilon
+HER	mu
+HER	lambda
+HER	delta
+HER	alpha
+HER	
+HER	mu
+HER	xi
+HER	pi
+HER	
+HER	xi
+HER	omicron
+HER	102
+HER	109
+HER	110
+HER	111
+HER	
+HYI	beta
+HYI	gamma
+HYI	epsilon
+HYI	delta
+HYI	alpha
+HYI	
+IND	alpha
+IND	theta
+IND	delta
+IND	
+IND	theta
+IND	beta
+IND	
+LAC	5
+LAC	alpha
+LAC	beta
+LAC	4
+LAC	5
+LAC	11
+LAC	6
+LAC	2
+LAC	5
+LAC	
+LAC	6
+LAC	1
+LAC	
+LIB	sigma
+LIB	alpha
+LIB	beta
+LIB	gamma
+LIB	upsilon
+LIB	tau
+LIB	
+LIB	gamma
+LIB	alpha
+LIB	
+LUP	alpha
+LUP	zeta
+LUP	epsilon
+LUP	gamma
+LUP	eta
+LUP	theta
+LUP	chi
+LUP	phi
+LUP	delta
+LUP	beta
+LUP	alpha
+LUP	iota
+LUP	
+LYR	alpha
+LYR	zeta
+LYR	delta
+LYR	gamma
+LYR	beta
+LYR	zeta
+LYR	
+MEN	alpha
+MEN	gamma
+MEN	eta
+MEN	beta
+MEN	
+MIC	alpha
+MIC	gamma
+MIC	epsilon
+MIC	theta
+MIC	iota
+MIC	alpha
+MIC	
+MUS	lambda
+MUS	epsilon
+MUS	alpha
+MUS	beta
+MUS	delta
+MUS	gamma
+MUS	alpha
+MUS	
+NOR	delta
+NOR	eta
+NOR	gamma
+NOR	epsilon
+NOR	delta
+NOR	
+OCT	beta
+OCT	delta
+OCT	nu
+OCT	beta
+OCT	
+OPH	alpha
+OPH	kappa
+OPH	zeta
+OPH	eta
+OPH	beta
+OPH	alpha
+OPH	
+OPH	kappa
+OPH	lambda
+OPH	delta
+OPH	epsilon
+OPH	
+OPH	beta
+OPH	gamma
+OPH	68
+OPH	70
+OPH	67
+OPH	
+OPH	zeta
+OPH	phi
+OPH	chi
+OPH	psi
+OPH	omega
+OPH	
+OPH	eta
+OPH	xi
+OPH	theta
+OPH	44
+OPH	
+PAV	alpha
+PAV	delta
+PAV	beta
+PAV	gamma
+PAV	alpha
+PAV	
+PAV	delta
+PAV	kappa
+PAV	zeta
+PAV	epsilon
+PAV	delta
+PAV	
+PAV	kappa
+PAV	lambda
+PAV	nu
+PAV	xi
+PAV	pi
+PAV	nu
+PAV	
+PAV	pi
+PAV	eta
+PAV	
+PSA	tau
+PSA	beta
+PSA	gamma
+PSA	delta
+PSA	alpha
+PSA	epsilon
+PSA	tau
+PSA	theta
+PSA	iota
+PSA	mu
+PSA	tau
+PSA	
+RET	alpha
+RET	beta
+RET	delta
+RET	epsilon
+RET	alpha
+RET	
+SCO	upsilon
+SCO	lambda
+SCO	kappa
+SCO	iota
+SCO	theta
+SCO	eta
+SCO	zeta
+SCO	mu
+SCO	epsilon
+SCO	tau
+SCO	alpha
+SCO	sigma
+SCO	nu
+SCO	beta
+SCO	delta
+SCO	
+SCO	sigma
+SCO	rho
+SCO	pi
+SCO	
+SCT	beta
+SCT	alpha
+SCT	gamma
+SCT	
+SER	beta
+SER	gamma
+SER	kappa
+SER	beta
+SER	delta
+SER	alpha
+SER	epsilon
+SER	mu
+SER	eps_oph
+SER	ups_oph
+SER	nu
+SER	xi
+SER	omicron
+SER	nu_oph
+SER	eta
+SER	70_oph
+SER	67_oph
+SER	72_oph
+SER	
+SGE	gamma
+SGE	delta
+SGE	alpha
+SGE	
+SGE	delta
+SGE	beta
+SGE	
+SGR	zeta
+SGR	tau
+SGR	sigma
+SGR	phi
+SGR	zeta
+SGR	
+SGR	phi
+SGR	lambda
+SGR	delta
+SGR	gamma
+SGR	epsilon
+SGR	delta
+SGR	
+SGR	epsilon
+SGR	zeta
+SGR	alpha
+SGR	beta
+SGR	
+APS	alpha
+APS	delta
+APS	gamma
+APS	beta
+APS	delta
+APS	
+AQL	gamma
+AQL	delta
+AQL	lambda
+AQL	iota
+AQL	eta
+AQL	theta
+AQL	beta
+AQL	alpha
+AQL	gamma
+AQL	zeta
+AQL	epsilon
+AQL	
+AQR	alpha
+AQR	gamma
+AQR	eta
+AQR	pi
+AQR	alpha
+AQR	beta
+AQR	nu
+AQR	mu
+AQR	epsilon
+AQR	
+AQR	beta
+AQR	iota
+AQR	
+AQR	alpha
+AQR	omicron
+AQR	theta
+AQR	lambda
+AQR	phi
+AQR	psi
+AQR	delta
+AQR	tau
+AQR	lambda
+AQR	
+AQR	psi^2
+AQR	98
+AQR	99
+AQR	101
+AQR	
+AQR	psi^1
+AQR	88
+AQR	89
+AQR	86
+AQR	
+ARA	alpha
+ARA	beta
+ARA	gamma
+ARA	delta
+ARA	
+ARA	beta
+ARA	zeta
+ARA	
+ARA	epsilon
+ARA	zeta
+ARA	eta
+ARA	
+VOL	beta
+VOL	epsilon
+VOL	zeta
+VOL	gamma
+VOL	epsilon
+VOL	alpha
+VOL	beta
+VOL	
+VOL	delta
+VOL	epsilon
+VOL	theta
+VOL	
+VUL	13
+VUL	alpha
+VUL	1
+VUL	
+BOO	theta
+BOO	lambda
+BOO	eta
+BOO	upsilon
+BOO	
+BOO	gamma
+BOO	rho
+BOO	alpha
+BOO	zeta
+BOO	epsilon
+BOO	delta
+BOO	beta
+BOO	gamma
+BOO	lambda
+BOO	
+BOO	delta
+BOO	mu
+BOO	
+BOO	rho
+BOO	sigma
+BOO	epsilon
+BOO	
+CAP	delta
+CAP	gamma
+CAP	iota
+CAP	theta
+CAP	beta
+CAP	alpha
+CAP	
+CAP	iota
+CAP	36
+CAP	zeta
+CAP	theta
+CAP	
+CAP	theta
+CAP	eta
+CAP	rho
+CAP	beta
+CAP	
+CAP	eta
+CAP	24
+CAP	
+CAP	rho
+CAP	psi
+CAP	omega
+CAP	
+TUC	gamma
+TUC	epsilon
+TUC	zeta
+TUC	beta
+TUC	gamma
+TUC	alpha
+TUC	
+TUC	delta
+TUC	gamma
+TUC	
+TRA	alpha
+TRA	beta
+TRA	epsilon
+TRA	gamma
+TRA	alpha
+TRA	
+TEL	epsilon
+TEL	alpha
+TEL	delta
+TEL	iota
+TEL	eta
+TEL	lambda
+TEL	zeta
+TEL	epsilon
+

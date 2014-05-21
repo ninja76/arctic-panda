@@ -1,0 +1,50 @@
+def buildMapData (objects, zoom)
+  zoom = zoom.to_i 
+  output = []
+  imageH = 600
+  imageW = 1200
+  avgX = 0
+  avgY = 0
+  centerX = 0 
+  centerY = 0 
+  objects = objects.to_a
+  objects.each do |key|
+    label = ""
+    sX = key[:cX]
+    sY = key[:cY]
+    r  = key[:mag].to_f
+    b  = key[:bayer]
+    n  = key[:name]
+    if r < 1
+      r = 80 
+      if n == ""
+        label = b
+      else
+        label = n
+      end
+    end
+    if r > 1 and r < 2
+      r = 2.5 
+    end
+    if r > 2 and r < 3
+      r = 1.75
+    end
+    if r > 3
+      r = 0.55 
+    end
+    #if sY > 3.141592
+    #  sY -= 2 * 3.141592
+    #end
+    orgx = 0.5 * imageH
+    orgy = 0.5 * imageW
+    screenX = orgx + (sX - centerX) / zoom
+    screenY = orgy + (sY - centerY) / -zoom
+    screenX = (imageW / 2) - ((imageW / (2 * zoom))) * (sY-centerY);
+    screenY = (imageH / 2) - ((imageH / (2 * zoom))) * (sX-centerX);
+    #screenX = screenX + 4 *((key[:cZ] - 0) / zoom) 
+    screenY = screenY
+    
+    output  << {:x => screenX, :y => screenY, :radius => r, :label => label} 
+  end
+    map_coords = output.to_json
+end
