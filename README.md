@@ -1,4 +1,4 @@
-Ruby Astronomical Project (aka fuzzy-lana)
+Ruby Astronomical Project (aka Arctic Panda)
 ================
 
 RAP is an appliation designed to allow for the easy creation of vector based start maps that can be printed to almost any
