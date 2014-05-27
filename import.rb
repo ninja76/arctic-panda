@@ -1,10 +1,10 @@
+#encoding: utf-8
 require 'open-uri'
 require 'csv'
 require './import_helpers'
 require 'trollop'
 require 'sequel'
 require './database'
-
 
 def messierimport
 ##Object  Type    RA (h)  DEC (▒) Magnitude       Size (arcminutes)       NGC#    Constellation   Detailed Type   Common Name
@@ -105,41 +105,42 @@ end
 
 def ngcimport
   dataset = database[:aobjects]
-  uri = open("http://vizier.cfa.harvard.edu/vizier/ftp/cats/VII/118/ngc2000.dat"){ |f| f.read }
-  names = open("ftp://cdsarc.u-strasbg.fr/cats/VII/118/names.dat"){ |f| f.read }
-  uri.each_line do |l|
-    ngc = l[0,5]
-    type = l[7,2].lstrip
-    ra  = l[11,6].lstrip
-    dec  = l[19,6].lstrip
-    const = l[29,3].lstrip
-    const = transCon(const)
-    mag = l[40,3].lstrip
-    n_mag = l[44,1].lstrip
-    # Clean up and normailize fields
-    if type == "" or type =~ /\*/ or type == "?"
-      type = "-"
+  lines = open("datasets/NGCIC.txt"){ |f| f.read }
+  lines.each_line do |l|
+    data = l.encode('UTF-8', :invalid => :replace).split("\t")
+    ngc = data[0]
+    type = data[13]
+    con = data[7]
+    mag = data[17]
+    # RA 00h 07m 15.9s
+    rdata = data[5].split(' ') 
+    rh = rdata[0]
+    rm = rdata[1]
+    rs = rdata[2]
+    ra = rh.to_f + (rm.to_f/60) + (rs.to_f/3600)
+    ra = "%.02f" % ra
+    # DEC -35<BA> 23' 36
+    ddata = data[6].split(' ')
+    d = ddata[0]
+    s = 1
+    if d[0] ='-'
+      s = -1
     end
+    d[0] = ''
+    dm = ddata[1]
+    ds = ddata[2]
+    dec = d.to_f + (dm.to_f/60) + (ds.to_f/3600) * s
+    dec = "%.02f" % dec 
     type = transtype(type)
-    name = getname(ngc,names).rstrip
-    if ngc =~/I/
-      ic = "I"
+    con  = transCon(con)
+    puts "#{ra}, #{dec}, #{ngc}, #{type}, #{con}, #{mag}"
+    duplicate = database["SELECT id FROM aobjects WHERE ngc ='NGC#{ngc}'"]
+    if duplicate.count > 0
+      puts "Duplicate NGC object found!"
     else
-      ic = ""
+      puts "Inserting #{ngc}"
+      dataset.insert(:ngc => ngc, :type => type,:const => con,:ra => ra,:dec => dec,:mag => mag)
     end
-    ngc = ngc.gsub(' ', '')
-    ngc = ngc.gsub('I','')
-    ngc = format('%04d',ngc)
-    type = type
-    dec  = dec
-    ra   = ra
-    junk,extra = l.split('=')
-    if extra =~/M/
-      mes = extra.chomp
-      mes = extra.rstrip
-    end
-    dataset.insert(:ic => ic,:mes => mes,:ngc => ngc, :hip => '',:type => type,:const => const,:ra => ra,:dec => dec,:mag => mag,:hd =>'',:yale=> '',:gliese=> '', :name=> name,:bayer=> '',:distance=> '',:cindex=> '',:spectrum=> '',:absmag=> n_mag,:cX=>'',:cY=>'',:cX=>'',:glat=>'',:glong=>'')
-
   end
 end
 

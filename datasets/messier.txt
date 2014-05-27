@@ -3,8 +3,8 @@ M2	Globular Cluster	21.55833	-0.81667	6.5	12.9	NGC7089	Aquarius	Globular Cluster
 M3	Globular Cluster	13.70333	28.38333	6.4	16.2	NGC5272	Canes Venaciti	Globular Cluster	
 M4	Globular Cluster	16.39333	-26.53333	5.9	26.3	NGC6121	Scorpius	Globular Cluster	
 M5	Globular Cluster	15.31	2.08333	5.8	17.4	NGC5904	Serpens	Globular Cluster	
-M6	Open Cluster	17.66833	-32.21667	4.2	15	NGC6405	Scorpius	Open Cluster	Butterfly Cluster
-M7	Open Cluster	17.89833	-34.81667	3.3	80	NGC6475	Scorpius	Open Cluster	The Scorpion's Tail
+M7	Open Cluster	17.66833	-32.21667	4.2	15	NGC6405	Scorpius	Open Cluster	Butterfly Cluster
+M8	Open Cluster	17.89833	-34.81667	3.3	80	NGC6475	Scorpius	Open Cluster	The Scorpion's Tail
 M8	Nebula	18.06333	-24.38333	5.8	90	NGC6523	Sagittarius	Diffuse Nebula	Lagoon Nebula
 M9	Globular Cluster	17.32	-18.51667	7.9	9.3	NGC6333	Ophiuchus	Globular Cluster	
 M10	Globular Cluster	16.95167	-4.1	6.6	15.1	NGC6254	Ophiuchus	Globular Cluster	
@@ -15,7 +15,7 @@ M14	Globular Cluster	17.62667	-3.25	7.6	11.7	NGC6402	Ophiuchus	Globular Cluster
 M15	Globular Cluster	21.5	12.16667	6.4	12.3	NGC7078	Pegasus	Globular Cluster	
 M16	Open Cluster	18.31333	-13.78333	6	35	NGC6611	Serpens	Open Cluster	Associated with the Eagle Nebula
 M17	Open Cluster	18.34667	-16.18333	6	46	NGC6618	Sagittarius	Diffuse Nebula	Omega Swan Horseshoe or Lobster Nebula
-M18	Open Cluster	18.33167	-17.13333	6.9	9	NGC6613	Sagittarius	Open Cluster	
+M19	Open Cluster	18.33167	-17.13333	6.9	9	NGC6613	Sagittarius	Open Cluster	
 M19	Globular Cluster	17.04333	-26.26667	7.2	13.5	NGC6273	Ophiuchus	Globular Cluster	
 M20	Open Cluster	18.03833	-23.03333	6.3	29	NGC6514	Sagittarius	Diffuse Nebula	Trifid Nebula
 M21	Open Cluster	18.07667	-22.5	5.9	13	NGC6531	Sagittarius	Open Cluster	

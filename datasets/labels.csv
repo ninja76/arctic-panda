@@ -5,7 +5,7 @@ Alcyone,end,auto
 M45,start,hanging
 M42,end,text-after-edge
 Saiph,end,auto
-Antares,end,hanging
+Antares,end,auto
 Scheat,start,hanging
 Spica,end,auto
 Arcturus,end,auto
@@ -26,3 +26,5 @@ M40,end,auto
 M46,start,hanging
 M36,start,hanging
 M37,end,auto
+M17,end,auto
+M21,end,auto

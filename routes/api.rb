@@ -1,7 +1,8 @@
 # encoding: utf-8
-  get '/api/map/:scale/:maxmag/:ra/:dec/:width/:height/:isgrid/:iscline/:isboundry/:ismilky' do
+  get '/api/map/:scale/:maxmag/:ra/:dec/:width/:height/:isgrid/:iscline/:isboundry/:ismilky/:ngcmaglimit' do
     scale = params[:scale] 
     max_mag = params[:maxmag]
+    ngc_max_mag = params[:ngcmaglimit]
     ra = params[:ra]
     dec = params[:dec] 
     width = params[:width].to_i
@@ -10,8 +11,8 @@
     iscline = params[:iscline]
     isboundry = params[:isboundry]
     ismilky = params[:ismilky]
-    aobjects = database["SELECT ra,dec,mag,bayer,name,flamsteed,ccode,hd,type,mes FROM aobjects WHERE yale != '' OR mes != ' '"]
-    map = buildMapData(aobjects, scale, ra, dec, width, height, isgrid, iscline, isboundry, ismilky, max_mag)
+    aobjects = database["SELECT ra,dec,mag,bayer,name,flamsteed,ccode,hd,type,mes,ngc FROM aobjects WHERE yale != '' OR (type != 'Star' AND mag < #{ngc_max_mag})"]
+    map = buildMapData(aobjects, scale, ra, dec, width, height, isgrid, iscline, isboundry, ismilky, max_mag, ngc_max_mag)
     content_type :json
     map
   end

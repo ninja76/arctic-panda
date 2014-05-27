@@ -1,24 +1,27 @@
 def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
   require 'rasem'
   epoch = (Time.now.to_f * 1000).to_i
-  backgroundColor = "#00005d"
+  backgroundColor = "#00008A"
   ## Define Colors of elements
-  gridColor = "#3f3f3f"
+  gridColor = "#a9a9a9"
   gridWidth = "1.25"
   gridStyle = ""
   boundryColor = "#15bb00"
   boundryWidth = "1.75"
   boundryStyle = "4,4,4,4"
   milkyColor = "#a9a9a9"
-  constColor = "#f5f5f5"
+  constColor = "#4C4545" #"#f5f5f5"
   constWidth = "1.75"
   constStyle = ""
   eclipticStyle = "4,4,4,4"
-  eclipticColor = "#fff"
+  eclipticColor = "#a9a9a9"
   eclipticWidth = "1.0" 
-  starColor     = "#ebeb00"
-  objColor      = "#fff"
+  starColor     = "yellow"
+  objectColor      = "#fff"
   objSize       = "10"
+  objectLabelFontSize = "12px"
+  ngcObjectLabelFontSize = "10px"
+  ngcObjectColor    = "#a9a9a9"
   starScale     = 1.5
   starLabelColor    = "#fff"
   starLabelFontSize = "12px"
@@ -91,7 +94,7 @@ def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
             lx,ly = labeloffset(labelData,lines[i]["label"])
             offset = 3
             if lx == "end"
-              offset = -3
+              offset = -10
             end
             yoffset = 0
             if ly == "hanging"
@@ -145,13 +148,25 @@ def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
         else
           rad = 4 * starScale
           if lines[i]["mag"] < 10 
-            circle lines[i]["x"],lines[i]["y"],rad, :fill=>"none", :stroke=>"#fff", :stroke_width=>"1.0" 
+            if type == "Galaxy"
+              ellipse lines[i]["x"],lines[1]["y"],rad*2,rad,:fill=>"none", :stroke=>objectColor, :stroke_width=>"1.0"
+            else
+              circle lines[i]["x"],lines[i]["y"],rad, :fill=>"none", :stroke=>objectColor, :stroke_width=>"1.0" 
+            end
             lx,ly = labeloffset(labelData,lines[i]["label"])          
             offset = 3
             if lx == "end"
-              offset = -3
+              offset = -10
             end
-            text lines[i]["x"]+(rad+offset),lines[i]["y"]-(rad+3), lines[i]["label"], :text_anchor=>lx, :dominant_baseline=>ly, :fill=>objColor, :font_size=>starLabelFontSize
+            yoffset = 0
+            if ly == "hanging"
+              yoffset = 20
+            end
+            if lines[i]["label"] =~/NGC/
+              text lines[i]["x"]+(rad+offset),lines[i]["y"]-(rad), lines[i]["label"], :text_anchor=>lx, :dominant_baseline=>ly, :fill=>ngcObjectColor, :font_size=>ngcObjectLabelFontSize
+            else
+              text lines[i]["x"]+(rad+offset),lines[i]["y"]-(rad), lines[i]["label"], :text_anchor=>lx, :dominant_baseline=>ly, :fill=>objectColor, :font_size=>objectLabelFontSize
+            end
           end
         end
         i=i+1
@@ -201,13 +216,13 @@ end
 def labeloffset(labelData, label)
   x = "start"
   y = "auto"
-  puts "Checking #{label}"
-  labelData.each do |l|
-    if label == l.split(",")[0]
-      x = l.split(",")[1]
-      y = l.split(",")[2]
-      puts "#{label} Found #{x} #{y}"
-      break
+  if label !=""
+    labelData.each do |l|
+      if label == l.split(",")[0]
+        x = l.split(",")[1]
+        y = l.split(",")[2]
+        break
+      end
     end
   end
   return x,y.chomp

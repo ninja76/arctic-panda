@@ -1,5 +1,0 @@
-AWS.config(
- :access_key_id => 'AKIAIUA2DXHXBDBMGFDA',
- :secret_access_key => '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',
- :region => 'us-east-1')
-

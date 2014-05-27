@@ -2,21 +2,7 @@
 div class="row" style="" 
   div class="center-align text-center"
     div class="col col-lg-12"    
-      div class="form-horizontal col-lg-2 col-md-3 col-sm-4" 
-        div class="list-group" style="text-align:left;"
-          a href="#" class="list-group-item active" style="text-align:center;"
-            h4 class="list-group-item-heading text-center"
-            | Maps
-          a href="#" id="popular4" class="list-group-item"
-            | Orion 
-          a href="#" id="popular1" class="list-group-item"
-            | North Polar Map 
-          a href="#" id="popular5" class="list-group-item"
-            | South Polar Map
-          a href="#" id="popular2" class="list-group-item"
-            | Equatoral 6 Hr
-          a href="#" id="popular3" class="list-group-item"
-            | Equatoral 18 Hr
+      div class="form-horizontal col-lg-3 col-md-3 col-sm-4" 
         fieldset
           legend style="font-size:12px; text-align:left;"   
             | Define Center of Map
@@ -39,10 +25,16 @@ div class="row" style=""
             | Objects 
           div class="form-group"
             label for="magslider" class="control-label col-lg-5" style="text-align:left;"
-              Object Mag Limit
-            | 1-7
+              |Star Mag Limit
+            | 1-9
             div class="col-lg-6"
               div id="magslider"
+          div class="form-group"
+            label for="ngcmagslider" class="control-label col-lg-5" style="text-align:left;"
+              |Deep Space Mag Limit
+            | 1-12
+            div class="col-lg-6"
+              div id="ngcmagslider"
           div class="form-group"
             label for="zoomslider" class="control-label col-lg-5 col-md-3" style="text-align:left;"
               Map F.O.V 
@@ -72,11 +64,32 @@ div class="row" style=""
           div class="form-group"
             button id="generate" type="button" class="btn btn-success"
               | Generate Map
-      div class="col-lg-9 pull-left" 
-        div style="width:1000px;height:900px;" class="" id="mapdiv"
+      div class="col-lg-7 pull-left" 
+        div style="width:600px;height:1000px;" class="" id="mapdiv"
           div id="loading"
             div id="progresstext"
               | Please Wait, Buliding new Map
             div id="progessbar" class="progress progress-striped active" style="width: 100%"
               div class="progress-bar progress-bar-success" style="width: 100%;padding-left:10px;"
-          <img id="map" src="" style="width:1000px;height:850px;" onload="$('#loading').hide()"> </img>
+          <img id="map" src="" style="width:800px;height:1000px;" onload="$('#loading').hide()"> </img>
+      div class="col-lg-2 pull-right"
+        div class="list-group" style="text-align:left;"
+          a href="#" class="list-group-item active" style="text-align:center;"
+            h4 class="list-group-item-heading text-center"
+            | Maps
+          a href="#" id="popular1" class="list-group-item"
+            | North Polar Map
+          a href="#" id="popular2" class="list-group-item"
+            | Equatoral 0-4 Hr
+          a href="#" id="popular3" class="list-group-item"
+            | Equatoral 4-8 Hr
+          a href="#" id="popular4" class="list-group-item"
+            | Equatoral 8-12 Hr
+          a href="#" id="popular5" class="list-group-item"
+            | Equatoral 12-16 Hr
+          a href="#" id="popular6" class="list-group-item"
+            | Equatoral 16-20 Hr
+          a href="#" id="popular7" class="list-group-item"
+            | Equatoral 20-24 Hr
+          a href="#" id="popular8" class="list-group-item"
+            | South Polar Map

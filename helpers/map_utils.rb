@@ -21,7 +21,6 @@ def buildGridData(scale, c_ra, c_dec, width, height)
         entry = "#{x.to_i},#{y.to_i}"
         output <<  {:pos => entry,:t =>"line",:g =>"1"}
         if x.to_i < 0 and mark == ''
-          puts "Mark: #{declination}, #{x}, #{y}"
           entry = "0,#{y.to_i}" 
           tick_output <<  {:pos => entry,:t =>"tick",:g =>"dec", :d => "%02d" % declination}
           mark = "found"
@@ -49,7 +48,6 @@ def buildGridData(scale, c_ra, c_dec, width, height)
         output << {:pos => 'new', :t =>"line"}
       end
       if y.to_i < 0 and y.to_i > -10.0 and mark == '' and z > 0.0
-          puts "Mark: RA #{rectascension}, #{x}, #{y}, #{z}"
           entry = "#{x.to_i},0" 
           tick_output <<  {:pos => entry,:t =>"tick",:g =>"ra", :d => "%02d" % rectascension}
           mark = "found"
@@ -63,12 +61,12 @@ def buildGridData(scale, c_ra, c_dec, width, height)
   return output + tick_output
 end
 
-def buildMapData (objects, scale, rectascension, declination, width, height, isgrid, iscline, isboundry, ismilky, mag)
+def buildMapData (objects, scale, rectascension, declination, width, height, isgrid, iscline, isboundry, ismilky, mag, ngcmag)
   # First check if a map already exists with the specified parameters
   ## build file name
   scale = sprintf('%.2f', scale)
   mag = sprintf('%.1f', mag)
-  fn = "#{rectascension.to_i}#{declination.to_i}#{iscline}#{ismilky}#{isboundry}#{scale}#{mag}#{isgrid}"
+  fn = "#{rectascension.to_i}#{declination.to_i}#{iscline}#{ismilky}#{isboundry}#{scale}#{mag}#{ngcmag}#{isgrid}"
   fn = fn.gsub('.','_')
   if checkmap(fn) == true
     puts "Map found in Cache! #{fn}"
@@ -102,7 +100,8 @@ def buildMapData (objects, scale, rectascension, declination, width, height, isg
        h  = key[:hd]
        t  = key[:type]
        m2  = key[:mes]
-       label = ""
+       ngc = key[:ngc]
+       label = "Derp"
        label = b
        if n
          label = n
@@ -112,6 +111,9 @@ def buildMapData (objects, scale, rectascension, declination, width, height, isg
        end
        if m2 != " " 
          label = m2
+       end
+       if t != "Star" and m2 == nil
+         label = "NGC#{ngc}"
        end
        if x < width+200 and y < height+200 and x > 0-200 and y > 0-200 and z > -0.00 
          output  << {:x => x.to_i, :y => y.to_i, :mag => m, :label => label, :f => f, :c => c, :t => t, :h => h} 
