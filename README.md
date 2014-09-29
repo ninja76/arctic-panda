@@ -8,4 +8,3 @@ Most of the algorithms and concepts have been ported from the excellent
 [PP3](http://pp3.sourceforge.net/) by Torsten Bronger
 
 
-Docker!
