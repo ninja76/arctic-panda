@@ -5,7 +5,7 @@ def convertMap(inputfile,format)
   s3 = AWS::S3.new
   b = s3.buckets['fuzzy-lana']
   Cloudconvert.configure do |config|
-      config.api_key  = "vYJiWB0UUNw3Houf6SJs_WNNzL4YNgGuyRAxCoMuqvr51wBPVKZbvvjgLj9wldloK4PxIN20ku0PySualC3F1w"
+      config.api_key  = "vYJiWB0UUNw3Houf6SJs_WNNzL4Yr51wBPVKZbvvjgLj9wldloK4PxIN20ku0PySualC3F1w"
   end
   conversion = Cloudconvert::Conversion.new
   inputformat = "svg"
