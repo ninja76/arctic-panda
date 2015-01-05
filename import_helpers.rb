@@ -1,4 +1,8 @@
-  def getname(ngc, names)
+#
+# Utility for importing data from various catalogs
+#
+  
+def getname(ngc, names)
     names.each_line do |l|
       m_ngc = l[36,5]
       name = l[0,35]

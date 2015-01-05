@@ -19,7 +19,9 @@
 
   get '/api/constellations' do
     constellations = database["SELECT name, code, ra, dec FROM constellations"]
+    puts constellations.to_a.to_json
+
     content_type :json
-    @constellations
+    constellations.to_a.to_json
   end
 

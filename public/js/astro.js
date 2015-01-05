@@ -53,6 +53,18 @@ window.onload=function(){
   //$('#deccontrol').hide();
   $('#loading').hide();
   
+  $( "#cselect" )
+    .change(function () {
+      var str = ""
+      $( "select option:selected" ).each(function() {
+        str += $( this ).val() + " ";
+      });
+      $("#ra").val(str.split("z")[0]);
+      $("#dec").val(str.split("z")[1]);
+      console.log(str);
+  }); 
+
+
   $('#magslider').noUiSlider({
       start: [5.0],
       range: {

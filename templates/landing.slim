@@ -20,7 +20,9 @@ div class="row" style=""
             label for="constellation" class="control-label col-lg-4" style="text-align:left;"
                | Constellation
             div class="col-lg-6"
-              select class="form-control" id="select"
+              select class="form-control" id="cselect"
+                 -@constellations.each do |spot|
+                   option  value="#{spot.ra}z#{spot.dec}" #{spot.name} 
           legend style="font-size:12px; text-align:left;"
             | Objects 
           div class="form-group"

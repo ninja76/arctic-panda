@@ -1,3 +1,7 @@
+#
+# Utility for importing data from various catalogs
+#
+
 #encoding: utf-8
 require 'open-uri'
 require 'csv'
