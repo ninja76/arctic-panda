@@ -3,6 +3,7 @@ def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
   epoch = (Time.now.to_f * 1000).to_i
   backgroundColor = "#00008A"
   ## Define Colors of elements
+  backgroundColor = "#000000" #"#00008A"
   gridColor = "#a9a9a9"
   gridWidth = "1.25"
   gridStyle = ""
@@ -10,13 +11,13 @@ def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
   boundryWidth = "1.75"
   boundryStyle = "4,4,4,4"
   milkyColor = "#a9a9a9"
-  constColor = "#4C4545" #"#f5f5f5"
+  constColor = "#a5a1a1" #"#f5f5f5"
   constWidth = "1.75"
   constStyle = ""
   eclipticStyle = "4,4,4,4"
   eclipticColor = "#a9a9a9"
   eclipticWidth = "1.0" 
-  starColor     = "yellow"
+  starColor     = "#fff"
   objectColor      = "#fff"
   objSize       = "10"
   objectLabelFontSize = "12px"
@@ -197,7 +198,6 @@ def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
   o.write(:file => "public/image/#{fn}.svg")
   o.acl = :public_read
   convrt = convertMapLocal(fn,"png")
-  #convrt = convertMapLocal(fn,"pdf")
   puts "Debug: ending build_svg"
   return "{\"map\":\"#{fn}\"}"
 end
@@ -205,12 +205,10 @@ end
 def checkmap(name)
   s3 = AWS::S3.new
   puts "Checking for existing map #{name}"
-  puts  s3.buckets['fuzzy-lana'].objects["#{name}.svg"].exists?
   if s3.buckets['fuzzy-lana'].objects["#{name}.svg"].exists?
     return true
-  else
-    return false
-  end 
+  end
+  return false
 end
 
 def labeloffset(labelData, label)

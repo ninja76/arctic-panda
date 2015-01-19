@@ -35,7 +35,6 @@ def convertMapLocal(inputfile,format)
   b = s3.buckets['fuzzy-lana']
   
   convert = `/usr/bin/cairosvg public/image/#{inputfile}.svg -f #{format} -o public/image/#{inputfile}.#{format}`
-  #convert = `/usr/bin/inkscape -f public/image/#{inputfile}.svg --export-#{format} public/image/#{inputfile}.#{format}`
 
   o = b.objects["#{inputfile}.#{format}"]
   o.write(:file => "public/image/#{inputfile}.#{format}")
@@ -43,6 +42,5 @@ def convertMapLocal(inputfile,format)
   url = o.url_for(:read)
   puts "DOne. Returning success #{url}"
   return "success"
-
 end
 

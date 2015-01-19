@@ -52,7 +52,10 @@ window.onload=function(){
   //$('#racontrol').hide();
   //$('#deccontrol').hide();
   $('#loading').hide();
+  $('#showmw').hide();
   
+  $("#ra").val("0.0");
+  $("#dec").val("37.0");  
   $( "#cselect" )
     .change(function () {
       var str = ""
@@ -86,68 +89,11 @@ $('#zoomslider').noUiSlider({
       step: 1,
       range: {
           'min': 3, 
-          'max': 14 
+          'max': 10 
       }
   });
 
   $('#generate').on('click', function () {
-      draw_map();
-  });
-
-  $('#popular1').on('click', function () {
-      $("#ra").val("0");
-      $("#dec").val("90");
-      $("#zoomslider").val("14.00");
-      $("#showgrid").prop('checked', true);
-      $("#showboundry").prop('checked', true);
-      draw_map(); 
-  });
-  $('#popular2').on('click', function () {
-      $("#ra").val("2");
-      $("#dec").val("0");
-      $("#zoomslider").val("5.00");
-      $("#showgrid").prop('checked', true);
-      $("#showboundry").prop('checked', true);
-      draw_map();
-  });
-  $('#popular3').on('click', function () {
-      $("#ra").val("6");
-      $("#dec").val("0");
-      $("#zoomslider").val("5.00");
-      $("#showgrid").prop('checked', true);
-      $("#showboundry").prop('checked', true);
-      draw_map();
-  });
-  $('#popular4').on('click', function () {
-      $("#ra").val("10");
-      $("#dec").val("0");
-      $("#zoomslider").val("5.00");
-      $("#showgrid").prop('checked', true);
-      $("#showboundry").prop('checked', true);
-      draw_map();
-  });
-  $('#popular5').on('click', function () {
-      $("#ra").val("14");
-      $("#dec").val("0");
-      $("#zoomslider").val("5.00");
-      $("#showgrid").prop('checked', true);
-      $("#showboundry").prop('checked', true);
-      draw_map();
-  });
-  $('#popular6').on('click', function () {
-      $("#ra").val("18");
-      $("#dec").val("0");
-      $("#zoomslider").val("5.00");
-      $("#showgrid").prop('checked', true);
-      $("#showboundry").prop('checked', true);
-      draw_map();
-  });
-  $('#popular7').on('click', function () {
-      $("#ra").val("22");
-      $("#dec").val("0");
-      $("#zoomslider").val("5.00");
-      $("#showgrid").prop('checked', true);
-      $("#showboundry").prop('checked', true);
       draw_map();
   });
 

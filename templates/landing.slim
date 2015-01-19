@@ -21,8 +21,8 @@ div class="row" style=""
                | Constellation
             div class="col-lg-6"
               select class="form-control" id="cselect"
-                 -@constellations.each do |spot|
-                   option  value="#{spot.ra}z#{spot.dec}" #{spot.name} 
+                -@constellations.each do |spot|
+                  option  value="#{spot.ra}z#{spot.dec}" #{spot.name} 
           legend style="font-size:12px; text-align:left;"
             | Objects 
           div class="form-group"
@@ -58,7 +58,7 @@ div class="row" style=""
               | Boundries (experimental) 
             div class="col-lg-4"
               input type="checkbox" id="showboundry"
-          div class="form-group"
+          div class="form-group" id="showmw"
             label for="showmilkyway" class="control-label col-lg-8 col-md-4" style="text-align:left;"
               | Milky Way (over 120k pts!) 
             div class="col-lg-4"
@@ -67,31 +67,10 @@ div class="row" style=""
             button id="generate" type="button" class="btn btn-success"
               | Generate Map
       div class="col-lg-7 pull-left" 
-        div style="width:600px;height:1000px;" class="" id="mapdiv"
+        div style="width:100%;" class="" id="mapdiv"
           div id="loading"
             div id="progresstext"
               | Please Wait, Buliding new Map
             div id="progessbar" class="progress progress-striped active" style="width: 100%"
               div class="progress-bar progress-bar-success" style="width: 100%;padding-left:10px;"
-          <img id="map" src="" style="width:800px;height:1000px;" onload="$('#loading').hide()"> </img>
-      div class="col-lg-2 pull-right"
-        div class="list-group" style="text-align:left;"
-          a href="#" class="list-group-item active" style="text-align:center;"
-            h4 class="list-group-item-heading text-center"
-            | Maps
-          a href="#" id="popular1" class="list-group-item"
-            | North Polar Map
-          a href="#" id="popular2" class="list-group-item"
-            | Equatoral 0-4 Hr
-          a href="#" id="popular3" class="list-group-item"
-            | Equatoral 4-8 Hr
-          a href="#" id="popular4" class="list-group-item"
-            | Equatoral 8-12 Hr
-          a href="#" id="popular5" class="list-group-item"
-            | Equatoral 12-16 Hr
-          a href="#" id="popular6" class="list-group-item"
-            | Equatoral 16-20 Hr
-          a href="#" id="popular7" class="list-group-item"
-            | Equatoral 20-24 Hr
-          a href="#" id="popular8" class="list-group-item"
-            | South Polar Map
+          <img id="map" src="" style="width:80%;" onload="$('#loading').hide()"> </img>
