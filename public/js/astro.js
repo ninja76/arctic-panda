@@ -37,23 +37,31 @@ function draw_map(){
           url: '/api/map/'+zoom+'/'+maglimit+'/'+ra+'/'+dec+'/'+mapwidth+'/'+mapheight+'/'+isgrid+'/'+isclines+'/'+isboundry+'/'+ismilky+'/'+ngcmaglimit,
           beforeSend:function() {
             $('#loading').show(); 
-            $('#progresstext').html("<b>Generating Map...3, 2, 1 ");
           },
           success:function(data){
-            $('#progresstext').html("<b>Downloading Map...Hang Tight");
-            console.log("Opening " +  'http://fuzzy-lana.s3.amazonaws.com/'+data.map+'.png');
-            $("#map").attr("src", 'http://fuzzy-lana.s3.amazonaws.com/'+data.map+'.png');
+	    console.log(data);
+            if (data.status == "success") {
+	            var thelink = $('<a>',{
+		      text: 'Job Submitted - Check status here',
+	              title: 'Job Status',
+        	      //href: 'http://fuzzy-lana.s3.amazonaws.com/'+data.map+'.svg'
+	              href: '/jobs/'+data.jobId
+        	    }).appendTo('#mapdiv');
+            } else {
+              $("#map").attr("src", 'http://fuzzy-lana.s3.amazonaws.com/'+data.jobId+'.png');
+	    }
             $('#loading').hide();
           }
         });
  }
 
 window.onload=function(){
-  //$('#racontrol').hide();
-  //$('#deccontrol').hide();
+  $('#racontrol').hide();
+  $('#deccontrol').hide();
   $('#loading').hide();
-  $('#showmw').hide();
-  
+//  $('#showmw').hide();
+  $('#constlines').attr('checked'); //.prop('checked');
+ 
   $("#ra").val("0.0");
   $("#dec").val("37.0");  
   $( "#cselect" )

@@ -7,6 +7,9 @@ require 'slim'
 require 'sequel'
 require 'aws-sdk'
 require './database'
+require 'shoryuken'
+
+
 Sequel::Database.extension :pagination
 Sinatra::Application.register Sinatra::AssetPack
 require File.expand_path(File.dirname(__FILE__) + '/config/config.aws.rb')
@@ -47,10 +50,25 @@ class MyApp < Sinatra::Application
     set :views, File.dirname(__FILE__) + '/templates'
     set :site, "www.roxlr.com:9292"
     set :s3url, "http://fuzzy-lana.s3.amazonaws.com"
+    #LOGGER = Logger.new("sinatra.log")
+    enable :logging, :dump_errors, :inline_templates
+    set :raise_errors, true
   end
+
+end
+
+class MyWorker
+	@app = MyApp.new
+	database = ""
+	include Shoryuken::Worker
+	    shoryuken_options queue: 'arctic_panda', auto_delete: true
+	    def perform(sqs_msg, hash); 
+		data = JSON.parse(hash)
+		#fileName = generateFileName(data["ra"],data["dec"], data[:iscline], data["ismilky"], data["isboundry"], data["scale"], data["mag"], data["ngcmag"], data["isgrid"])
+                map = submit_job(data)
+	    end
 end
 
 require_relative 'models/init'
 require_relative 'routes/init'
 require_relative 'helpers/init'
-

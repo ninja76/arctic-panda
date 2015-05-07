@@ -10,6 +10,7 @@ gem 'rasem'
 gem 'sqlite3'
 gem 'cloudconvert'
 gem 'aws-sdk'
+gem 'shoryuken'
 group :development do
 end
 

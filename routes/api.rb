@@ -11,10 +11,17 @@
     iscline = params[:iscline]
     isboundry = params[:isboundry]
     ismilky = params[:ismilky]
-    aobjects = database["SELECT ra,dec,mag,bayer,name,flamsteed,ccode,hd,type,mes,ngc FROM aobjects WHERE yale != '' OR (type != 'Star' AND mag < #{ngc_max_mag})"]
-    map = buildMapData(aobjects, scale, ra, dec, width, height, isgrid, iscline, isboundry, ismilky, max_mag, ngc_max_mag)
+    #aobjects = database["SELECT ra,dec,mag,bayer,name,flamsteed,ccode,hd,type,mes,ngc FROM aobjects WHERE yale != '' OR (type != 'Star' AND mag < #{ngc_max_mag})"]
+    result = queue_submit(scale, ra, dec, width, height, isgrid, iscline, isboundry, ismilky, max_mag, ngc_max_mag);
+    #map = buildMapData(aobjects, scale, ra, dec, width, height, isgrid, iscline, isboundry, ismilky, max_mag, ngc_max_mag)
     content_type :json
-    map
+    headers( "Access-Control-Allow-Origin" => "*" )
+    headers( "Access-Control-Allow-Headers" => "*" )
+    if result.split(':')[0] == "cache"
+      { :status => 'cached', :jobId => result.split(':')[1] }.to_json
+    else
+      { :status => 'success', :jobId => result }.to_json
+    end
   end
 
   get '/api/constellations' do

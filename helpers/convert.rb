@@ -33,9 +33,10 @@ end
 def convertMapLocal(inputfile,format)
   s3 = AWS::S3.new
   b = s3.buckets['fuzzy-lana']
-  
+  puts "COnverting public/image/#{inputfile}.#{format}" 
   convert = `/usr/bin/cairosvg public/image/#{inputfile}.svg -f #{format} -o public/image/#{inputfile}.#{format}`
-
+  
+  puts "Copy to S3"
   o = b.objects["#{inputfile}.#{format}"]
   o.write(:file => "public/image/#{inputfile}.#{format}")
   o.acl = :public_read

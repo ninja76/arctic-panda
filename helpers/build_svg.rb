@@ -4,18 +4,18 @@ def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
   backgroundColor = "#00008A"
   ## Define Colors of elements
   backgroundColor = "#000000" #"#00008A"
-  gridColor = "#a9a9a9"
+  gridColor = "#737D86"
   gridWidth = "1.25"
   gridStyle = ""
-  boundryColor = "#15bb00"
+  boundryColor = "#336699"
   boundryWidth = "1.75"
   boundryStyle = "4,4,4,4"
   milkyColor = "#a9a9a9"
-  constColor = "#a5a1a1" #"#f5f5f5"
+  constColor = "#A8890A" #"#f5f5f5"
   constWidth = "1.75"
   constStyle = ""
   eclipticStyle = "4,4,4,4"
-  eclipticColor = "#a9a9a9"
+  eclipticColor = "#ff0000"
   eclipticWidth = "1.0" 
   starColor     = "#fff"
   objectColor      = "#fff"
@@ -195,7 +195,7 @@ def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
   s3 = AWS::S3.new
   b = s3.buckets['fuzzy-lana']
   o = b.objects["#{fn}.svg"]
-  o.write(:file => "public/image/#{fn}.svg")
+  o.write(:file => "/opt/arctic-panda/public/image/#{fn}.svg")
   o.acl = :public_read
   convrt = convertMapLocal(fn,"png")
   puts "Debug: ending build_svg"

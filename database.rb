@@ -68,4 +68,12 @@ migration "alter constellations" do
   end
 end
 
+migration "create the jobs status table" do
+  database.create_table :jobs do
+    primary_key :id
+    text        :jobid
+    bool        :done
+  end
+end
+
 Sequel::Model.db.extension(:pagination)

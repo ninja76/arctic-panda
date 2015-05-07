@@ -47,17 +47,17 @@ div class="row" style=""
             label for="showgrid" class="control-label col-lg-8 col-md-3" style="text-align:left;"
               | Circular Grid
             div class="col-lg-4"
-              input type="checkbox" id="showgrid"
+              input type="checkbox" id="showgrid" checked="checked"
           div class="form-group"
             label for="showgrid" class="control-label col-lg-8" style="text-align:left;"
               | Const. Lines 
             div class="col-lg-4"
-              input type="checkbox" id="constlines"
+              input type="checkbox" id="constlines" checked="checked"
           div class="form-group"
             label for="showboundry" class="control-label col-lg-8 col-md-4" style="text-align:left;"
               | Boundries (experimental) 
             div class="col-lg-4"
-              input type="checkbox" id="showboundry"
+              input type="checkbox" id="showboundry" checked="checked"
           div class="form-group" id="showmw"
             label for="showmilkyway" class="control-label col-lg-8 col-md-4" style="text-align:left;"
               | Milky Way (over 120k pts!) 
@@ -73,4 +73,6 @@ div class="row" style=""
               | Please Wait, Buliding new Map
             div id="progessbar" class="progress progress-striped active" style="width: 100%"
               div class="progress-bar progress-bar-success" style="width: 100%;padding-left:10px;"
+            a href=""
+              Get the SVG Version Here
           <img id="map" src="" style="width:80%;" onload="$('#loading').hide()"> </img>

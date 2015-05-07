@@ -1,3 +1,8 @@
+def generateFileName(rectascension,declination,iscline,ismilky,isboundry,scale,mag,ngcmag,isgrid)
+  fn = "#{rectascension.to_i}#{declination.to_i}#{iscline}#{ismilky}#{isboundry}#{scale}#{mag}#{ngcmag}#{isgrid}"
+  fn = fn.gsub('.','_')
+end
+
 def buildGridData(scale, c_ra, c_dec, width, height)
   m_PI = 3.141592653589793
   m_PI_2 = m_PI / 2
@@ -61,17 +66,17 @@ def buildGridData(scale, c_ra, c_dec, width, height)
   return output + tick_output
 end
 
-def buildMapData (objects, scale, rectascension, declination, width, height, isgrid, iscline, isboundry, ismilky, mag, ngcmag)
+def buildMapData (fn, objects, scale, rectascension, declination, width, height, isgrid, iscline, isboundry, ismilky, mag, ngcmag)
   # First check if a map already exists with the specified parameters
   ## build file name
   scale = sprintf('%.2f', scale)
   mag = sprintf('%.1f', mag)
-  fn = "#{rectascension.to_i}#{declination.to_i}#{iscline}#{ismilky}#{isboundry}#{scale}#{mag}#{ngcmag}#{isgrid}"
-  fn = fn.gsub('.','_')
-  if checkmap(fn) == true
-    puts "Map found in Cache! #{fn}"
-    return "{\"map\":\"#{fn}\"}"
-  end
+#  fn = "#{rectascension.to_i}#{declination.to_i}#{iscline}#{ismilky}#{isboundry}#{scale}#{mag}#{ngcmag}#{isgrid}"
+#  fn = fn.gsub('.','_')
+#  if checkmap(fn) == true
+#    puts "Map found in Cache! #{fn}"
+#    return "{\"map\":\"#{fn}\"}"
+#  end
   puts "New map requested"
   scale = scale.to_f
   output = []
