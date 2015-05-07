@@ -14,6 +14,7 @@ def submit_job(data)
    puts "DEBUG submit_job #{data["ngc_max_mag"]}"
 
    aobjects = Aobject.where{(yale != '') | ((type != 'Star') & (mag < data["ngc_max_mag"]))}
+   aobjects = Aobject.where("yale != '' OR (type != 'Star' AND mag < #{data["ngc_max_mag"]})") #{(yale != '') | ((type != 'Star') & (mag < data["ngc_max_mag"]))}
    puts "Object Dump: #{aobjects.inspect}"
    map = buildMapData(data["fileName"], aobjects, data["scale"], data["ra"], data["dec"], data["width"], data["height"], data["isgrid"], data["iscline"], data["isboundry"], data["ismilky"], data["max_mag"], data["ngc_max_mag"])
    puts "STEP 99: #{map}" 
