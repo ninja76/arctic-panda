@@ -1,0 +1,12 @@
+aws:
+  access_key_id:      
+  secret_access_key: 
+  region:             us-east-1
+  receive_message:              # See http://docs.aws.amazon.com/sdkforruby/api/Aws/SQS/Queue.html#receive_messages-instance_method
+    attribute_names:
+      - ApproximateReceiveCount
+      - SentTimestamp
+concurrency: 2  # The number of allocated threads to process messages. Default 25
+delay: 10        # The delay in seconds to pause a queue when it's empty. Default 0
+queues:
+  - [arctic_panda, 2]
