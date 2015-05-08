@@ -68,6 +68,7 @@ class MyWorker
                 map = submit_job(data)
 	    end
 end
+@root = ::File.dirname(__FILE__)
 
 require_relative 'models/init'
 require_relative 'routes/init'

@@ -23,7 +23,7 @@ def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
   objectLabelFontSize = "12px"
   ngcObjectLabelFontSize = "10px"
   ngcObjectColor    = "#a9a9a9"
-  starScale     = 1.5
+  starScale     = 2.0
   starLabelColor    = "#fff"
   starLabelFontSize = "12px"
   legendColor   = "#000"
@@ -35,7 +35,7 @@ def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
   end
   lines = JSON.parse(json)
   grid  = JSON.parse(grid_data)
-  File.open("public/image/#{fn}.svg", "w") do |f|
+  File.open("/opt/arctic-panda/public/image/#{fn}.svg", "w") do |f|
     Rasem::SVGImage.new(width,height, f) do |f|
       rectangle 0,0,width,height, :fill=>backgroundColor
       i = 0
@@ -47,49 +47,12 @@ def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
           y = lines[i]["y"]
           mag = lines[i]["mag"]
           label = lines[i]["label"]          
+          max_point_size = 4.5
           rad = 0
-          w   = 0
-          if mag < 0.20 
-            rad = 4.75
-            w = 5
-          end
-          if mag > 0.20 && mag < 1
-            rad = 4.0
-            w = 5
-          end
-          if mag > 1.0 && mag < 1.50
-            rad = 3.5
-            w = 4
-          end
-          if mag > 1.50 && mag < 2
-            rad = 3.0
-          end
-          if mag > 2 && mag < 2.5
-            rad = 2.3
-          end
-          if mag > 2.5 && mag < 3
-            rad = 1.8
-          end
-          if mag > 3 && mag < 3.5
-            rad = 1.25 
-          end
-          if mag > 3.5 && mag < 4
-            rad = 0.75
-          end
-          if mag > 4.0 && mag < 4.5 
-            rad = 0.6
-          end
-          if mag > 4.5 && mag <5.5 
-            rad = 0.45 
-          end
-          if mag > 5.5 && mag < 6.5
-            rad = 0.35 
-          end
-          if mag > 6.5
-            rad = 0.15
-          end
+          rad = max_point_size - ((mag/3) *starScale)
+          puts rad
           if mag < maxmag.to_f
-            circle x,y,rad*starScale, :stroke=>starColor, :fill=>starColor
+            circle x,y,rad, :stroke=>starColor, :fill=>starColor
           end
           if mag < 3
             lx,ly = labeloffset(labelData,lines[i]["label"])
@@ -147,7 +110,7 @@ def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
             end
           end
         else
-          rad = 4 * starScale
+          rad = 2 * starScale
           if lines[i]["mag"] < 10 
             if type == "Galaxy"
               ellipse lines[i]["x"],lines[1]["y"],rad*2,rad,:fill=>"none", :stroke=>objectColor, :stroke_width=>"1.0"
@@ -198,7 +161,6 @@ def buildSvg(json, grid_data, width, height, scale, fn, maxmag)
   o.write(:file => "/opt/arctic-panda/public/image/#{fn}.svg")
   o.acl = :public_read
   convrt = convertMapLocal(fn,"png")
-  puts "Debug: ending build_svg"
   return "{\"map\":\"#{fn}\"}"
 end
 
